@@ -6,9 +6,9 @@
 
         <div class="login-form">
 
-            <input type="text" onkeydown={{action userInput}} placeholder="Username">
+            <input type="text" onkeyup={{action userInput}} autocomplete="off" placeholder="Username">
             <div class="line"></div>
-            <input type="password" onkeydown={{action passInput}} placeholder="Password">
+            <input type="password" onkeyup={{action passInput}} autocomplete="off" placeholder="Password">
 
             <button class="haapa-button medium" onclick={{action attempt}}>Log in to Haapa</button>
 

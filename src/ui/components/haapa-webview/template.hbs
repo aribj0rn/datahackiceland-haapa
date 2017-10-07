@@ -30,7 +30,7 @@
     {{/if}}
 
     {{#if shouldShowError }}
-        <error-modal @update={{action updateState}} />
+        <error-modal @message={{state.error}} @update={{action updateState}} />
     {{/if}}
 
 </div>

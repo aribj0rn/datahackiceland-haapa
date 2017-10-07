@@ -25,6 +25,9 @@ export default class LoginScreen extends Component {
 
     attempt() {
 
+        console.log(this.user);
+        console.log(this.pass);
+
         if( this.user == 'demo' && this.pass == 'demo' ) {
             this.updateState('isAuthenticated', true);
         } else {

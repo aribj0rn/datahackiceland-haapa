@@ -17,4 +17,22 @@
     border-radius: 5px;
     box-shadow: 0 0 25px rgba(0,0,0,.2);
     box-sizing: border-box;
+    border: 2px solid $red;
+
+    p {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: #666;
+    }
+
+    .close {
+        margin-top: 10px;
+        text-align: right;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 900;
+        color: $blue;
+        padding: 10px;
+        margin-bottom: -10px;
+    }
 }

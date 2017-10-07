@@ -4,9 +4,10 @@ import ScreenState from '../../../utils/enums/ScreenState';
 export default class HaapaWebview extends Component {
 
     public screenState: any;
+    private defaultAuthenticatedScreen: ScreenState = ScreenState.Prescription;
 
     @tracked state = {
-        screen: ScreenState.Login,
+        screen: ScreenState.Loading,
         isAuthenticated: false,
         error: ''
     };
@@ -24,6 +25,10 @@ export default class HaapaWebview extends Component {
         // Clone the tracked object
         let cloned = Object.assign({}, this.state);
         cloned[key] = value;
+
+        if( key == 'isAuthenticated' ) {
+            cloned.screen = this.defaultAuthenticatedScreen;
+        }
 
         // Update the state.
         this.state = cloned;
