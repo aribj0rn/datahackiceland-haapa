@@ -1,0 +1,55 @@
+.prescription-overlay {
+    @include overlay;
+    z-index: 99999;
+}
+
+.prescription-detail {
+    @include centerer;
+    width: 90%;
+    background: #fff;
+    border-radius:5px;
+    z-index: 99999;
+    box-sizing: border-box;
+
+    h1 {
+        color: $red;
+        text-align: center;
+        padding: 25px 0;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .prescription-data {
+        dl {
+            padding-left: 20px;
+        }
+
+        dt {
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 24px;
+        }
+
+        dd {
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 30px;
+            line-height: 24px;
+        }
+
+        margin-bottom: 50px;
+    }
+
+    .close {
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+        font-weight: 900;
+        color: $blue;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        padding-left: 25px;
+        display: inline-block;
+    }
+}

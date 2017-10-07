@@ -7,8 +7,8 @@ export default class HaapaWebview extends Component {
     private defaultAuthenticatedScreen: ScreenState = ScreenState.Prescription;
 
     @tracked state = {
-        screen: ScreenState.Prescription,
-        isAuthenticated: true,
+        screen: ScreenState.Loading,
+        isAuthenticated: false,
         error: ''
     };
 

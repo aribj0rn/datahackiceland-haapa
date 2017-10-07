@@ -17,8 +17,27 @@
 </div>
 
 {{#if (notnull selectedItem)}}
-<div class="prescription-overlay"></div>
-<div class="prescription-detail">
-    {{selectedItem.name}}
+<div class="prescription-overlay animated quick fadeIn"></div>
+<div class="prescription-detail quick fadeIn">
+    <h1>{{selectedItem.name}}</h1>
+    <div class="prescription-data">
+        <dl>
+            <dt>Atc Code.</dt>
+            <dd>{{selectedItem.atccode}}</dd>
+            <dt>Form</dt>
+            <dd>{{selectedItem.form}}</dd>
+            <dt>Item No.</dt>
+            <dd>{{selectedItem.itemno}}</dd>
+            <dt>Number of packages</dt>
+            <dd>{{selectedItem.numberofpackages}}</dd>
+            <dt>Quantity</dt>
+            <dd>{{selectedItem.quantity}}</dd>
+            <dt>Strength</dt>
+            <dd>{{selectedItem.strength}}</dd>
+            <dt>Prescription Id</dt>
+            <dd>{{selectedItem.prescriptionid}}</dd>
+        </dl>
+    </div>
+    <div class="close" onclick={{action closePrescription}}>Close</div>
 </div>
 {{/if}}
