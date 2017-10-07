@@ -1,0 +1,82 @@
+.tab-bar {
+    position: fixed;
+    bottom: 28px;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    background: #fff;
+
+    .line, .line:before, .line:after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(-90deg, rgba(214,46,54,0.00) 0%, #EB549B 53%, rgba(211,42,42,0.00) 100%);
+    }
+
+    .line {
+        &:after, &:before {
+            opacity: .2;
+        }
+
+        &:before {
+            top: -2px;
+        }
+
+        &:after {
+            top: 2px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 12px 35px;
+    }
+
+    button {
+        display: inline-block;
+        outline: 0;
+        padding: 0;
+        border: 0;
+        text-align: center;
+        background: transparent;
+        padding: 0 20px;
+
+        &.medicine:before {
+            background-image: url(/assets/icon/Medicine.svg);
+            background-size: 22px 26px;
+        }
+
+        &.vaccines:before {
+            background-image: url(/assets/icon/Vaccines.svg);
+            background-size: 26px 26px;
+        }
+
+        &.information:before {
+            background-image: url(/assets/icon/Information.svg);
+            background-size: 26px 26px;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-family: Avenir-Heavy;
+            font-size: 13px;
+            color: #424242;
+            letter-spacing: 0;
+        }
+    }
+
+}

@@ -31,5 +31,8 @@ html, body {
 @import 'screens/error';
 
 @import 'elements/button';
-
-//@import 'components/something..';
+@import 'elements/app-header';
+@import 'elements/tab-bar';
+@import 'elements/screen-header';
+@import 'elements/prescription-list';
+@import 'elements/vaccines-list';

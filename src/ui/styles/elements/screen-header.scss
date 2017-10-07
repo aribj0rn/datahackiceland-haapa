@@ -1,0 +1,25 @@
+.screen-header {
+    position: relative;
+
+    h1 {
+        color: $red;
+        text-align: center;
+        font-family: 'Nunito', sans-serif;
+        font-size: 18px;
+        color: #DE3D5D;
+        letter-spacing: 0;
+        padding: 20px 0;
+    }
+
+    .add {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url(/assets/icon/Add.svg);
+        background-repeat: no-repeat;
+        background-size: 26px 26px;
+        background-position: 50% 50%;
+    }
+}

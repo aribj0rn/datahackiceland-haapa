@@ -1,0 +1,44 @@
+.prescription-list {
+    width: 90%;
+    margin: 0 auto;
+
+    .prescription-item {
+        width: 100%;
+        border: 1px solid #E4E4E4;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+
+        .type {
+
+            h2 {
+                color: $red;
+                font-family: 'Nunito', sans-serif;
+                font-size: 18px;
+                letter-spacing: 0;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-size: 15px;
+                color: #7F7F7F;
+                letter-spacing: 0;
+            }
+        }
+
+        .medicine-icon {
+            background-image: url(/assets/icon/Medicine.svg);
+            background-size: 22px 26px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: 18px;
+            right: 12px;
+        }
+    }
+}

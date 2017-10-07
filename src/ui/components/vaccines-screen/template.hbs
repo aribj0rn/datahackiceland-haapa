@@ -1,0 +1,15 @@
+<div class="animated quick fadeInUp">
+    <div class="screen-header">
+        <h1>Your vaccines</h1>
+    </div>
+    <div class="vaccines-list">
+        {{#each items key="@index" as |item|}}
+        <div class="vaccine-item">
+            <div class="type">
+                <h2>{{item.codename}}</h2>
+                <p>Received: {{format-date item.createddate}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

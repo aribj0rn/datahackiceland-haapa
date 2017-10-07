@@ -1,7 +1,7 @@
 <div>
-    {{#if isAuthenticated}}
+    {{#if isAuthenticated }}
 
-        <app-header @update={{action updateState}} />
+        <app-header @user={{user}} @logout={{action logout}} @update={{action updateState}} />
 
         {{#if (eq state.screen screenState.Prescription)}}
             <prescription-screen @update={{action updateState}} />

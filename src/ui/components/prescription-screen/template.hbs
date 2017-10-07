@@ -1,0 +1,24 @@
+<div class="animated quick fadeInUp">
+    <div class="screen-header">
+        <h1>Your prescriptions</h1>
+        <div class="add"></div>
+    </div>
+    <div class="prescription-list">
+        {{#each items key="@index" as |item|}}
+        <div class="prescription-item">
+            <div class="type">
+                <h2>{{item.name}}</h2>
+                <p>{{item.dosageinstructions}}</p>
+            </div>
+            <div class="medicine-icon" onclick={{action viewPrescription item}}></div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{#if (notnull selectedItem)}}
+<div class="prescription-overlay"></div>
+<div class="prescription-detail">
+    {{selectedItem.name}}
+</div>
+{{/if}}

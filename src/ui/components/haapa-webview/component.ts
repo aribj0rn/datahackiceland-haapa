@@ -7,9 +7,15 @@ export default class HaapaWebview extends Component {
     private defaultAuthenticatedScreen: ScreenState = ScreenState.Prescription;
 
     @tracked state = {
-        screen: ScreenState.Loading,
-        isAuthenticated: false,
+        screen: ScreenState.Prescription,
+        isAuthenticated: true,
         error: ''
+    };
+
+    @tracked user = {
+        id: 'demo',
+        name: 'Demo Account',
+        subtitle: 'Icelandic'
     };
 
     constructor(options) {
@@ -26,7 +32,7 @@ export default class HaapaWebview extends Component {
         let cloned = Object.assign({}, this.state);
         cloned[key] = value;
 
-        if( key == 'isAuthenticated' ) {
+        if(key=='isAuthenticated' && value === true) {
             cloned.screen = this.defaultAuthenticatedScreen;
         }
 
@@ -35,9 +41,24 @@ export default class HaapaWebview extends Component {
 
     }
 
-    @tracked('state', 'error')
+    logout() {
+
+        this.state = {
+            screen: ScreenState.Login,
+            isAuthenticated: false,
+            error: ''
+        };
+
+    }
+
+    @tracked('state')
     get shouldShowError() {
         return this.state.error.length > 0;
+    }
+
+    @tracked('state')
+    get isAuthenticated() {
+        return this.state.isAuthenticated;
     }
 
 }

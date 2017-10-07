@@ -1,0 +1,67 @@
+.app-header {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:before {
+        content: '';
+        background-image: url(/assets/Haapa.svg);
+        background-size: 100%;
+        width: 92px;
+        height: 92px;
+        opacity: .1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -46px;
+        margin-top: -46px;
+    }
+
+    .user {
+
+        img, .info {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+
+        .info {
+            padding-top: 6px;
+
+            .user-name {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                color: #424242;
+                letter-spacing: 0;
+            }
+
+            .subtitle {
+                /* Icelandic: */
+                font-family: 'Nunito', sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                color: #424242;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    .logout {
+        width: 44px;
+        height: 44px;
+        background-image: url(/assets/icon/logout.svg);
+        background-size: 32px 24px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,32 @@
+.vaccines-list {
+    width: 90%;
+    margin: 0 auto;
+
+    .vaccine-item {
+        width: 100%;
+        border: 1px solid #E4E4E4;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+
+        .type {
+
+            h2 {
+                color: $red;
+                font-family: 'Nunito', sans-serif;
+                font-size: 18px;
+                letter-spacing: 0;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-size: 15px;
+                color: #7F7F7F;
+                letter-spacing: 0;
+            }
+        }
+    }
+}

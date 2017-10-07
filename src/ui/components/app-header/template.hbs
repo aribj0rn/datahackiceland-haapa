@@ -1,1 +1,10 @@
-<div></div>
+<div class="app-header">
+    <div class="user">
+        <img src="/assets/users/{{@user.id}}.png">
+        <div class="info">
+            <div class="user-name">{{@user.name}}</div>
+            <div class="subtitle">{{@user.subtitle}}</div>
+        </div>
+    </div>
+    <div class="logout" onclick={{action @logout}}></div>
+</div>

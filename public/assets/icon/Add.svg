@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/Add</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.5474494%" y1="-9.05330882%" x2="100%" y2="208.42994%" id="linearGradient-1">
+            <stop stop-color="#EB549B" offset="0%"></stop>
+            <stop stop-color="#D32A2A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRESCRIPTIONS" transform="translate(-362.000000, -95.000000)">
+            <g id="icon/Add" transform="translate(362.000000, 95.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="30" height="30" rx="15"></rect>
+                <path d="M16.7142857,13.2857143 L16.7142857,10.7142857 C16.7142857,9.76751186 15.9467739,9 15,9 C14.0532261,9 13.2857143,9.76751186 13.2857143,10.7142857 L13.2857143,13.2857143 L10.7142857,13.2857143 L10.7142857,13.2857143 C9.76751186,13.2857143 9,14.0532261 9,15 C9,15.9467739 9.76751186,16.7142857 10.7142857,16.7142857 L13.2857143,16.7142857 L13.2857143,19.2857143 C13.2857143,20.2324881 14.0532261,21 15,21 C15.9467739,21 16.7142857,20.2324881 16.7142857,19.2857143 L16.7142857,19.2857143 L16.7142857,16.7142857 L19.2857143,16.7142857 C20.2324881,16.7142857 21,15.9467739 21,15 L21,15 L21,15 C21,14.0532261 20.2324881,13.2857143 19.2857143,13.2857143 L16.7142857,13.2857143 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
