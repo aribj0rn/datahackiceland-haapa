@@ -1,1 +1,36 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<div>
+    {{#if isAuthenticated}}
+
+        <app-header @update={{action updateState}} />
+
+        {{#if (eq state.screen screenState.Prescription)}}
+            <prescription-screen @update={{action updateState}} />
+        {{/if}}
+
+        {{#if (eq state.screen screenState.Vaccines)}}
+            <vaccines-screen @update={{action updateState}} />
+        {{/if}}
+
+        {{#if (eq state.screen screenState.Travel)}}
+            <travel-screen @update={{action updateState}} />
+        {{/if}}
+
+        <tab-bar @update={{action updateState}} />
+
+    {{else}}
+
+        {{#if (eq state.screen screenState.Loading)}}
+            <loading-screen @update={{action updateState}} />
+        {{/if}}
+
+        {{#if (eq state.screen screenState.Login)}}
+            <login-screen @update={{action updateState}} />
+        {{/if}}
+
+    {{/if}}
+
+    {{#if shouldShowError }}
+        <error-modal @update={{action updateState}} />
+    {{/if}}
+
+</div>

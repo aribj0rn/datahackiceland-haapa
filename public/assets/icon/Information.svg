@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/Information</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.5474494%" y1="-9.05330882%" x2="100%" y2="208.42994%" id="linearGradient-1">
+            <stop stop-color="#EB549B" offset="0%"></stop>
+            <stop stop-color="#DD3A56" offset="60.9791573%"></stop>
+            <stop stop-color="#D32A2A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="15.5474494%" y1="-9.05330882%" x2="68.2961857%" y2="123.503562%" id="linearGradient-2">
+            <stop stop-color="#EB549B" offset="0%"></stop>
+            <stop stop-color="#D32A2A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tabbar" transform="translate(-263.000000, -25.000000)">
+            <g id="Travel">
+                <g transform="translate(258.000000, 25.000000)">
+                    <g id="icon/Information" transform="translate(5.000000, 0.000000)">
+                        <circle id="Oval-2" stroke="url(#linearGradient-1)" stroke-width="2.5" cx="13" cy="13" r="11.75"></circle>
+                        <path d="M13.2158461,10.7106993 L13.2158461,10.7106993 L13.2158461,10.7106993 C13.7390877,10.7106993 14.1632587,11.1348704 14.1632587,11.6581119 L14.1632587,17.3425874 L14.1632587,17.3425874 C14.1632587,17.8658289 13.7390877,18.29 13.2158461,18.29 L13.2158461,18.29 L13.2158461,18.29 C12.6926046,18.29 12.2684336,17.8658289 12.2684336,17.3425874 L12.2684336,11.6581119 L12.2684336,11.6581119 C12.2684336,11.1348704 12.6926046,10.7106993 13.2158461,10.7106993 Z M12,8.1368951 C12,7.83161619 12.113162,7.56581698 12.3394895,7.33948951 C12.565817,7.11316204 12.8526696,7 13.2000559,7 C13.5474423,7 13.8395583,7.10789869 14.0764126,7.3236993 C14.3132669,7.53949991 14.4316923,7.81056247 14.4316923,8.1368951 C14.4316923,8.46322773 14.3132669,8.73429029 14.0764126,8.9500909 C13.8395583,9.16589151 13.5474423,9.2737902 13.2000559,9.2737902 C12.8526696,9.2737902 12.565817,9.16062816 12.3394895,8.93430069 C12.113162,8.70797322 12,8.44217402 12,8.1368951 Z" id="i" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
