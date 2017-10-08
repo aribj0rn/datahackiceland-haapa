@@ -4,7 +4,7 @@ export default class Request {
 
     private url: string;
     private data: any;
-    private prefix: string = 'http://130.208.244.7:1234/';
+    private prefix: string = 'http://138.68.141.130:1234/';
 
     constructor(url: string) {
 
