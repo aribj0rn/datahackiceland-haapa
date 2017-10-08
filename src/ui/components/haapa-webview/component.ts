@@ -9,7 +9,8 @@ export default class HaapaWebview extends Component {
     @tracked state = {
         screen: ScreenState.Loading,
         isAuthenticated: false,
-        error: ''
+        error: '',
+        isLoading: false
     };
 
     @tracked user = {
@@ -46,7 +47,8 @@ export default class HaapaWebview extends Component {
         this.state = {
             screen: ScreenState.Login,
             isAuthenticated: false,
-            error: ''
+            error: '',
+            isLoading: false
         };
 
     }

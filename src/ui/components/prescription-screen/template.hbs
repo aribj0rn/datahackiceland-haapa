@@ -14,6 +14,15 @@
         </div>
         {{/each}}
     </div>
+    <div class="screen-header">
+        <h1>Drug interactions</h1>
+    </div>
+    <div class="prescription-cross">
+        <input type="text" placeholder="Check potential interactions" onkeyup={{action medicineInput}}>
+        <button class="haapa-button small" style="margin-top: 15px;" onclick={{action checkInteractions}}>
+            Check
+        </button>
+    </div>
 </div>
 
 {{#if (notnull selectedItem)}}
@@ -39,5 +48,22 @@
         </dl>
     </div>
     <div class="close" onclick={{action closePrescription}}>Close</div>
+</div>
+{{/if}}
+
+{{#if (notnull interactionsData)}}
+<div class="prescription-overlay animated quick fadeIn"></div>
+<div class="prescription-detail quick fadeIn">
+    <h1>Cross references</h1>
+    <div class="prescription-data">
+        {{#each interactionsData key="@index" as |interaction|}}
+            {{#if (eq interaction.severity 'high')}}
+                <p><img src="/assets/icon/warning.svg" width="16"> {{interaction.description}}</p>
+            {{else}}
+                <p>{{interaction.description}}</p>
+            {{/if}}
+        {{/each}}
+    </div>
+    <div class="close" onclick={{action closeInteractions}}>Close</div>
 </div>
 {{/if}}

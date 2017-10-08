@@ -10,11 +10,14 @@
     border-radius:5px;
     z-index: 99999;
     box-sizing: border-box;
+    max-height: 80%;
+    overflow: auto;
 
     h1 {
         color: $red;
         text-align: center;
         padding: 25px 0;
+        font-size: 24px;
         font-family: 'Nunito', sans-serif;
     }
 
@@ -39,6 +42,18 @@
         }
 
         margin-bottom: 50px;
+
+         p {
+             line-height: 20px;
+             display: block;
+             color: #666;
+             font-family: 'Nunito', sans-serif;
+             font-size: 15px;
+             max-width: 90%;
+             text-align: justify;
+             margin: 0 auto;
+             margin-bottom: 35px;
+         }
     }
 
     .close {
@@ -46,7 +61,7 @@
         font-size: 14px;
         font-weight: 900;
         color: $blue;
-        position: absolute;
+        position: fixed;
         bottom: 15px;
         right: 15px;
         padding-left: 25px;

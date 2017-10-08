@@ -1,39 +1,22 @@
 import Component, { tracked } from '@glimmer/component';
+import Request from '../../../utils/http/request';
+import CurrentPrescriptions from '../../../utils/data/CurrentPrescriptions';
 
 export default class PrescriptionScreen extends Component {
 
+    private medicine: string = '';
+    private updateState: Function;
+
+    @tracked interactionsData: any = null;
     @tracked selectedItem = null;
-    @tracked items: Array<any> = [{
-    	"atccode": "M01AE01",
-    	"dosageinstructions": "1 tafla á dag",
-    	"form": "töflur",
-    	"ismonitored": false,
-    	"itemno": 0,
-    	"name": "Ibuprofen",
-    	"numberofpackages": 1,
-    	"prescriptionid": "16_3112754029_103_273167",
-    	"createddate": 1424096880000,
-    	"productid": "116584",
-    	"quantity": 100,
-    	"strength": "400 mg",
-    	"unit": "stk",
-    	"entityid": "16_3112754029_109_M01AE01"
-    },{
-    	"atccode": "M01AE02",
-    	"dosageinstructions": "2 töflur tvisvar á dag",
-    	"form": "töflur",
-    	"ismonitored": false,
-    	"itemno": 1,
-    	"name": "Panodil",
-    	"numberofpackages": 2,
-    	"prescriptionid": "16_3112754029_103_273167",
-    	"createddate": 1424096880000,
-    	"productid": "116584",
-    	"quantity": 50,
-    	"strength": "100 mg",
-    	"unit": "stk",
-    	"entityid": "16_3112754029_109_M01AE01"
-    }];
+    @tracked items: Array<any> = CurrentPrescriptions;
+
+    constructor(options) {
+
+        super(options);
+        this.updateState = options.args.update;
+
+    }
 
     viewPrescription(item) {
         this.selectedItem = item;
@@ -41,6 +24,47 @@ export default class PrescriptionScreen extends Component {
 
     closePrescription() {
         this.selectedItem = null;
+    }
+
+    medicineInput(e) {
+        this.medicine = e.target.value;
+
+        if(e.keyCode == 13) {
+            this.checkInteractions();
+        }
+    }
+
+    closeInteractions() {
+        this.interactionsData = null;
+    }
+
+    checkInteractions() {
+
+        this.interactionsData = null;
+
+        if(this.medicine.length > 0) {
+
+            this.updateState('isLoading', true);
+
+            let queryString = '?name=' + encodeURIComponent(this.medicine);
+
+            this.items.forEach((item) => {
+                queryString += '&name=' + encodeURIComponent(item.name);
+            });
+
+            let request = new Request('interactions' + queryString).get()
+                .then((response) => {
+                    this.interactionsData = [];
+                    this.interactionsData = response;
+                    this.updateState('isLoading', false);
+
+                }).catch((e) => {
+                    this.updateState('error', 'Error came up in retrieving interactions for ' + this.medicine);
+                    this.updateState('isLoading', false);
+                })
+
+        }
+
     }
 
 };
