@@ -25,7 +25,7 @@ export default class LoginScreen extends Component {
 
     attempt() {
 
-        if( this.user == 'demo' && this.pass == 'demo' ) {
+        if( this.user.toLowerCase() == 'demo' && this.pass.toLowerCase() == 'demo' ) {
             this.updateState('isAuthenticated', true);
         } else {
             this.updateState('error', 'Invalid username or password!');
